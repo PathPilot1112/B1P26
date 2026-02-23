@@ -11,7 +11,7 @@ public class PalindromeChecker {
     public static void main(String[] args){
         UseCase1 entry = new UseCase1();
 
-        // checking
+
 
     }
 }
