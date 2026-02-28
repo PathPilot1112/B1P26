@@ -1,22 +1,24 @@
 import java.util.*;
 
-public class UseCase7PalindromeCheckerApp {
+public class UseCase8PalindromeCheckerApp {
 
     public static void main(String[] args) {
         boolean IsPalindrome = true;
         String s = "bob";
 
-        Deque <Character> deque = new ArrayDeque<>();
+        LinkedList<Character> list = new LinkedList<>();
         for(char ch: s.toCharArray()){
-            deque.addFirst(ch);
+            list.addFirst(ch);
         }
+        char[] arr = s.toCharArray();
+        int end=s.length()-1;
+        while(list.size()>1){
 
-        for(char ch:s.toCharArray()){
-
-
-                if(ch!=deque.removeFirst()){
+                if(arr[end]!=list.removeLast()){
                     IsPalindrome = false;
                 }
+
+                end--;
 
 
 
