@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class UseCase5PalindromeCheckerApp {
+public class UseCase6PalindromeCheckerApp {
 
     public static void main(String[] args) {
         boolean IsPalindrome = true;
@@ -11,14 +11,19 @@ public class UseCase5PalindromeCheckerApp {
             stack.push(ch);
         }
 
-        for(char ch:s.toCharArray()){
-            if(!stack.isEmpty() && stack.peek() == ch){
-                if(ch!=stack.pop()){
+        Queue <Character> q = new LinkedList<>();
+        for(char ch: s.toCharArray()){
+            q.add(ch);
+        }
+
+        while(!q.isEmpty()){
+
+                if(q.remove()!=stack.pop()){
                     IsPalindrome = false;
                 }
 
 
-            }
+
         }
 
 
