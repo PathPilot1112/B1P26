@@ -1,24 +1,25 @@
 import java.util.*;
 
-public class UseCase5PalindromeCheckerApp {
+public class UseCase7PalindromeCheckerApp {
 
     public static void main(String[] args) {
         boolean IsPalindrome = true;
         String s = "bob";
 
-        Stack <Character> stack = new Stack<>();
+        Deque <Character> deque = new ArrayDeque<>();
         for(char ch: s.toCharArray()){
-            stack.push(ch);
+            deque.addFirst(ch);
         }
 
         for(char ch:s.toCharArray()){
-            if(!stack.isEmpty() && stack.peek() == ch){
-                if(ch!=stack.pop()){
+
+
+                if(ch!=deque.removeFirst()){
                     IsPalindrome = false;
                 }
 
 
-            }
+
         }
 
 
